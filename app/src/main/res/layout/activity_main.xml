@@ -4,15 +4,72 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background"
     tools:context=".Activity.IntroActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:layout_width="414dp"
+        android:layout_height="595dp"
+        android:layout_above="@id/cardviewid"
+        android:src="@drawable/deliveryman" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardviewid"
+        android:layout_width="344dp"
+        android:layout_height="270dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        app:cardCornerRadius="15dp"
+        app:cardElevation="10dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tv1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="20sp"
+                android:layout_marginRight="20dp"
+                android:fontFamily="@font/interbold"
+                android:text="Quick Delivery at your Door"
+                android:layout_marginTop="30dp"
+                android:textAlignment="center"
+                android:textColor="#4F4F4F"
+                android:textSize="31sp" />
+
+            <TextView
+                android:id="@+id/tv2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv1"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:fontFamily="@font/interbold"
+                android:text="Home delivery and online reservation system for restaurants and cafe"
+                android:textAlignment="center"
+                android:textColor="#BDBDBD"
+                android:layout_marginTop="5dp"/>
+
+            <Button
+                android:layout_width="210dp"
+                android:layout_height="68dp"
+                android:fontFamily="@font/intersemibold"
+                android:text="Get Started"
+                android:textSize="20sp"
+                android:background="@drawable/buttonbg"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="30dp"/>
+
+
+        </RelativeLayout>
+
+
+    </androidx.cardview.widget.CardView>
 
 </RelativeLayout>
